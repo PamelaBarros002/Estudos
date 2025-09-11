@@ -1,0 +1,25 @@
+
+
+
+body {
+    background-image: linear-gradient(90deg,#F2EBF2,#BE8FBF,#806FA6,#C6C5D9);
+}
+
+main {
+    background-color: #dbcae2;
+}
+
+p{
+    color:black;
+}
+h1{
+    color: rgb(131, 59, 131);
+}
+
+h2 {
+    color: darkmagenta;
+}
+
+h3{
+    color: darkmagenta;
+}
