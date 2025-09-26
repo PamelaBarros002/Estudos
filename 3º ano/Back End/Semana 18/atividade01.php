@@ -6,18 +6,18 @@
     <title>Calculadora de Desconto</title>
 </head>
 <body>
-   <?php 
-$precoProduto = 150.00;
-$percentualDesconto = 10;
+    <?php 
+    $precoProduto = 150.00 ;
+    $percentualDesconto = 10 ;
+    
 
-$valorDesconto = $precoProduto * ($percentualDesconto / 100);
-$precoFinal = $precoProduto - $valorDesconto;
+    $valorDesconto = $precoProduto * ($percentualDesconto / 100) ;
+    
+    $precoFinal = $precoProduto - $valorDesconto;
 
-echo "
-    Preço Original: R$ " . number_format($precoProduto, 2, ',', '.') . "<br>
-    Desconto de {$percentualDesconto}%: R$ " . number_format($valorDesconto, 2, ',', '.') . "<br>
-    Preço Final: R$ " . number_format($precoFinal, 2, ',', '.');
-
+ echo "Preço Original: R$ " . number_format($precoProduto, 2, ',', '.') . "<br>";
+echo "Desconto de $percentualDesconto%: R$ " . number_format($valorDesconto, 2, ',', '.') . "<br>";
+echo "Preço Final: R$ " . number_format($precoFinal, 2, ',', '.');
     ?>
 </body>
 </html>

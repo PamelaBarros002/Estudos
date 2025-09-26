@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Arbutus&family=Caprasimo&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+HU:wght@100..400&family=Playwrite+MX+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image:linear-gradient(90deg,#6593A6, #B0CDD9, #D0E9F2);
+    justify-content: center;
+}
+
+form{
+    background-color: #fff;
+}
+
+h1{
+    font-family: 'Arbutus', serif;
+    color: #3B9ABF;
+}
+
+h2 {
+    font-family: 'Arbutus', serif;
+}
+
