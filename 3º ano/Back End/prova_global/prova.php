@@ -46,6 +46,7 @@
         echo "Frete: R$ $frete_formatado <br>";
         echo "Valor Total com o Frete: R$ $valor_total_formatado";
 ?>
+
     </section>
 </body>
 </html>
