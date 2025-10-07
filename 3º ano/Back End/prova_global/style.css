@@ -4,7 +4,7 @@
    ESTILO GERAL DA PÁGINA
    ======================= */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #0A2647, #144272, #205295);
     color: #0A2647;
     margin: 0;
@@ -178,13 +178,12 @@ footer {
 /*
 CORES ESCOLHIDAS 🎨
 #0A2647, #144272, #205295, #2C74B3, #A5D7E8
-Essa paleta foi escolhida por transmitir modernidade,
-tecnologia e confiança, combinando perfeitamente com
-a proposta da loja "PC-Pronto". Os tons de azul reforçam
+Essa paleta foi escolhida por transmitir suavidade,
+calma. Os tons de azul reforçam
 a ideia de segurança e inovação.
 
 FONTES ESCOLHIDAS ✍️
-Títulos: Arbutus — estilo marcante e criativo.
-Texto: Roboto — moderna e fácil de ler.
+Títulos: Arbutus — estilo marcante, destaca bem para chamar atenção do título.
+Texto: Arial — simples e fácil de ler e compreender.
 A combinação traz um visual profissional e equilibrado.
 */
