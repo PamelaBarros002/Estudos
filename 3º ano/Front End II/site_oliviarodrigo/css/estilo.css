@@ -1,0 +1,220 @@
+/* =============================
+   ESTILO GERAL DO SITE
+============================= */
+body {
+    background-color: #f5ebff; /* Cor de fundo clara */
+    color: #8b49b8; /* Cor padrão do texto */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte padrão */
+    margin: 20px; /* Espaçamento das bordas do site */
+}
+
+/* =============================
+   TÍTULOS
+============================= */
+h1  {
+    color: #8832c2; /* Cor do título principal */
+    text-align: center; /* Centraliza o texto */
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva bonita */
+    font-size: 3rem; /* Tamanho grande */
+    font-weight: 700; /* Negrito */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2); /* Sombra suave atrás do texto */
+}
+
+h2 {
+   color: #7021ac; /* Cor do subtítulo */
+   text-align: center; /* Centraliza */
+   font-family: 'Quicksand', sans-serif; /* Fonte mais leve */
+   font-size: 1.8rem; /* Tamanho médio */
+   font-weight: 700; /* Negrito */
+}
+
+/* Linha divisória estilizada */
+hr {
+    border: none; /* Remove a borda padrão */
+    height: 2px; /* Espessura da linha */
+    background-color: #7021ac; /* Cor da linha */
+    margin: 15px 0; /* Espaçamento em cima e embaixo */
+}
+
+/* =============================
+   LINKS
+============================= */
+a {
+    color: #561569; /* Cor inicial */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Negrito */
+}
+
+a:hover {
+    color: #000000; /* Muda de cor no hover */
+    text-decoration: underline; /* Adiciona sublinhado */
+}
+
+/* =============================
+   LISTAS
+============================= */
+ul {
+    list-style-type: none; /* Remove os pontinhos da lista */
+    padding: 0; /* Remove espaçamento padrão */
+}
+
+li {
+    margin-bottom: 10px; /* Espaço entre os itens */
+    background-color: #b98ddd; /* Fundo dos itens */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Texto centralizado */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Sombrinha suave */
+}
+
+/* =============================
+   IMAGENS
+============================= */
+img {
+    display: block; /* Garante que a imagem se comporte como bloco */
+    margin: 0 auto; /* Centraliza */
+    max-width: 300px; /* Largura máxima */
+    height: auto; /* Mantém proporção */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Sombrinha */
+}
+
+/* Parágrafos */
+p {
+    text-align: justify; /* Justifica o texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #000000; /* Cor preta */
+}
+
+/* Efeito nas imagens ao passar o mouse */ 
+img:hover { 
+    transform: scale(1.05); /* Aumenta levemente */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3); /* Destaque maior */
+}
+
+/* Efeito de clique nas imagens */
+img:active { 
+    transform: scale(0.95); /* Diminui ao clicar */
+}
+
+/* =============================
+   EFEITO NOS ITENS DA LISTA
+============================= */
+li {
+    transition: all 0.3s ease; /* Transição suave para hover */
+}
+
+li:hover {
+    background-color: #a267d3; /* Troca a cor */
+    transform: scale(1.05);    /* Cresce um pouco */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Mais destaque */
+    cursor: pointer;           /* Cursor de mãozinha */
+}
+
+/* =============================
+   BOTÃO VOLTAR (BALÃO FLUTUANTE)
+============================= */
+.voltar {
+    display: inline-block; /* Faz virar um bloco clicável */
+    margin: 20px auto; /* Centraliza */
+    padding: 12px 25px; /* Espaçamento interno */
+    background-color: #b98ddd; /* Cor do botão */
+    color: #fff; /* Texto branco */
+    font-weight: bold; /* Texto em negrito */
+    text-decoration: none; /* Sem sublinhado */
+    border-radius: 25px; /* Bordas arredondadas tipo pílula */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombrinha */
+    transition: all 0.3s ease; /* Suavidade na transição */
+    animation: flutuar 2s infinite ease-in-out; /* Animação de flutuar */
+}
+
+/* Efeito hover no botão */
+.voltar:hover {
+    background-color: #a267d3; /* Troca a cor */
+    transform: scale(1.08); /* Cresce */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Mais sombra */
+}
+
+/* Animação de flutuar */
+@keyframes flutuar {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* =============================
+   RESPONSIVIDADE
+============================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+    body {
+        margin: 10px; /* Diminui margens */
+    }
+
+    h1 {
+        font-size: 2.2rem; /* Reduz tamanho */
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    li {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    img {
+        max-width: 250px; /* Imagem menor */
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    body {
+        margin: 5px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Ainda menor */
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    li {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    img {
+        max-width: 180px; /* Imagem bem menor */
+    }
+}
+
+/* =============================
+   LINKS MAIS MODERNOS
+============================= */
+a {
+  color: #7021ac; /* Cor base */
+  text-decoration: none; 
+  font-weight: bold;
+  position: relative; /* Necessário pro ::after */
+}
+
+a::after {
+  content: ""; /* Cria a barrinha */
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0; /* Começa invisível */
+  height: 3px;
+  background: #401561; /* Cor da barrinha */
+  transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+  width: 100%; /* Barrinha aparece no hover */
+}
