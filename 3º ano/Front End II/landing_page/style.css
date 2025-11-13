@@ -209,3 +209,12 @@ section + section {
   margin-top: 40px;
 }
 
+html {
+  scroll-behavior: smooth; /* rolagem suave 💨 */
+}
+
+section {
+  scroll-margin-top: 100px; /* ajusta se o header for fixo */
+}
+
+
