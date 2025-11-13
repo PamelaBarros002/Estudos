@@ -1,0 +1,133 @@
+/*
+ * Configurações Gerais
+ */
+:root {
+    /* Paleta de Cores Pastéis */
+    --rosa-claro: #F9D5D3;
+    --bege-rosado: #FBEAE7;
+    --creme: #FFF7E9;
+    --verde-menta: #D6EADF;
+    --cinza-claro: #E8E8E8;
+    --texto-principal: #3a3a3a; /* Cinza escuro para boa legibilidade */
+    --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Use uma fonte mais suave, se possível (ex: Google Fonts) */
+    background-color: var(--creme); /* Cor de fundo principal */
+    color: var(--texto-principal);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+ * Layout Principal
+ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    flex-grow: 1; /* Garante que o conteúdo ocupe o espaço disponível */
+}
+
+/*
+ * Título e Destaque
+ */
+.titulo-site {
+    font-size: 3em;
+    color: var(--rosa-claro);
+    text-shadow: 2px 2px 4px var(--bege-rosado);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.frase-destaque {
+    font-size: 1.5em;
+    color: var(--texto-principal);
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/*
+ * Menu de Navegação
+ */
+.menu-principal {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.botao-menu {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: var(--texto-principal);
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 150px;
+}
+
+/* Cores específicas para os botões do menu */
+.botao-menu.rosa {
+    background-color: var(--rosa-claro);
+    border: 2px solid #F8C2C0; /* Borda um pouco mais escura */
+}
+
+.botao-menu.verde {
+    background-color: var(--verde-menta);
+    border: 2px solid #C4E0D1;
+}
+
+.botao-menu.bege {
+    background-color: var(--bege-rosado);
+    border: 2px solid #FADCDC;
+}
+
+.botao-menu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/*
+ * Imagem de Destaque
+ */
+.imagem-destaque {
+    height: 300px;
+    background-color: var(--cinza-claro); /* Placeholder para a imagem */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #888;
+    box-shadow: var(--sombra-suave);
+    border: 3px solid var(--bege-rosado);
+}
+
+/*
+ * Rodapé
+ */
+.rodape {
+    background-color: var(--bege-rosado);
+    color: var(--texto-principal);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Empurra o rodapé para a parte inferior */
+    font-size: 0.9em;
+    border-top: 1px solid var(--cinza-claro);
+}
+
+.rodape p {
+    margin: 5px 0;
+}

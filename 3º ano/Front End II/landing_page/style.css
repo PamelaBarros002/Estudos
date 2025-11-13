@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --rosa: #f8b6c3;
+  --roxo: #d8c7ff;
+  --branco: #ffffff;
+  --preto: #2a2a2a;
+}
+
+/* Corpo geral */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--roxo), var(--rosa));
+  color: var(--preto);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Cabeçalhos principais */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: var(--preto);
+  margin-top: 30px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--preto);
+  margin-top: 20px;
+}
+
+/* Linhas decorativas */
+hr {
+  width: 60%;
+  border: 1px solid var(--rosa);
+  margin: 20px auto;
+}
+
+/* Parágrafos e texto */
+p {
+  width: 80%;
+  margin: 10px auto;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Listas de links */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--preto);
+  font-weight: bold;
+  background: var(--branco);
+  padding: 8px 16px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  background: var(--rosa);
+  color: var(--branco);
+  transform: scale(1.05);
+}
+
+/* Imagens */
+img {
+  
+  margin: 20px auto;
+  max-width: 200px;
+  border-radius: 50%;
+  border: 4px solid var(--branco);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Rodapé */
+small, footer, p small {
+  display: block;
+  margin-top: 40px;
+  color: var(--preto);
+  font-size: 0.9rem;
+}
+
+/* Animação suave */
+body {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botão de volta */
+a[href*="index.html"] {
+  background: var(--roxo);
+  margin-top: 20px;
+}
+
+a[href*="index.html"]:hover {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+/* Efeito ao passar o mouse no título */
+h1:hover {
+  color: #c24be2; /* Muda o tom para um roxo mais vibrante */
+  transform: scale(1.05); /* Leve aumento */
+  text-shadow: 3px 3px 10px rgba(255, 150, 255, 0.6);
+  letter-spacing: 2px; /* Letras se afastam um pouquinho */
+  cursor: pointer;
+}
+
+/* ===== CABEÇALHO FIXO ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #111; /* preto fosco */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+/* Logo no canto esquerdo */
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Links de navegação */
+header nav a {
+  color: #ccc;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--rosa);
+}
+
+/* Ajuste para que o conteúdo não fique escondido atrás do header */
+body {
+  padding-top: 70px; /* distância do topo */
+}
+
+section {
+  width: 85%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  border-top: 6px solid var(--rosa); /* linha colorida em cima */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* animação suave ao passar o mouse */
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* título dentro do quadrado */
+section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: var(--preto);
+}
+
+/* texto dentro do quadrado */
+section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--preto);
+}
+
+/* espaçamento entre os “cards” */
+section + section {
+  margin-top: 40px;
+}
+
