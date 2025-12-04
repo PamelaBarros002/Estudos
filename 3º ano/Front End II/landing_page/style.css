@@ -1,220 +1,217 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-  --rosa: #f8b6c3;
-  --roxo: #d8c7ff;
+  --rosa: #eeb7c8;        /* Rosa suave e elegante */
+  --rosa-escuro: #d47a97;
+  --roxo: #cbb8ff;        /* Roxo pastel moderno */
   --branco: #ffffff;
-  --preto: #2a2a2a;
+  --cinza-claro: #f7f7f7;
+  --preto: #1e1e1e;
+  --shadow-soft: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 24px rgba(0,0,0,0.12);
 }
 
-/* Corpo geral */
+/* ============================
+   BODY
+============================ */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, var(--roxo), var(--rosa));
-  color: var(--preto);
+  background: linear-gradient(135deg, #f6e9ff, #ffe4ee);
   margin: 0;
   padding: 0;
+  color: var(--preto);
   text-align: center;
   min-height: 100vh;
+  animation: fade 0.8s ease-in-out;
 }
 
-/* Cabeçalhos principais */
-h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  color: var(--preto);
-  margin-top: 30px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-}
-
-h2 {
-  font-family: 'Poppins', sans-serif;
-  color: var(--preto);
-  margin-top: 20px;
-}
-
-/* Linhas decorativas */
-hr {
-  width: 60%;
-  border: 1px solid var(--rosa);
-  margin: 20px auto;
-}
-
-/* Parágrafos e texto */
-p {
-  width: 80%;
-  margin: 10px auto;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-/* Listas de links */
-ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-ul li {
-  margin: 10px 0;
-}
-
-a {
-  text-decoration: none;
-  color: var(--preto);
-  font-weight: bold;
-  background: var(--branco);
-  padding: 8px 16px;
-  border-radius: 25px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  background: var(--rosa);
-  color: var(--branco);
-  transform: scale(1.05);
-}
-
-/* Imagens */
-img {
-  
-  margin: 20px auto;
-  max-width: 200px;
-  border-radius: 50%;
-  border: 4px solid var(--branco);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  transition: transform 0.4s ease;
-}
-
-img:hover {
-  transform: scale(1.05);
-}
-
-/* Rodapé */
-small, footer, p small {
-  display: block;
-  margin-top: 40px;
-  color: var(--preto);
-  font-size: 0.9rem;
-}
-
-/* Animação suave */
-body {
-  animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Botão de volta */
-a[href*="index.html"] {
-  background: var(--roxo);
-  margin-top: 20px;
-}
-
-a[href*="index.html"]:hover {
-  background: var(--preto);
-  color: var(--branco);
-}
-
-/* Efeito ao passar o mouse no título */
-h1:hover {
-  color: #c24be2; /* Muda o tom para um roxo mais vibrante */
-  transform: scale(1.05); /* Leve aumento */
-  text-shadow: 3px 3px 10px rgba(255, 150, 255, 0.6);
-  letter-spacing: 2px; /* Letras se afastam um pouquinho */
-  cursor: pointer;
-}
-
-/* ===== CABEÇALHO FIXO ===== */
+/* ============================
+   HEADER PROFISSIONAL
+============================ */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
-  background-color: #f1cae4; /* preto fosco */
-  color: rgb(5, 5, 5);
+  background: var(--branco);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow-soft);
+  z-index: 999;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: auto;
+  height: 75px;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-  z-index: 1000;
 }
 
-/* Logo no canto esquerdo */
 header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 2px;
+  font-size: 2.4rem;
+  color: var(--preto);
+  transition: 0.3s ease;
 }
 
-/* Links de navegação */
+header .logo:hover {
+  transform: scale(1.06);
+}
+
+header nav {
+  display: flex;
+  gap: 35px;
+}
+
 header nav a {
-  color: #000000;
-  margin-left: 25px;
   text-decoration: none;
+  color: var(--preto);
   font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 0.95rem;
+  position: relative;
+  padding-bottom: 4px;
+  transition: 0.3s ease;
 }
 
 header nav a:hover {
-  color: var(--rosa);
+  color: var(--rosa-escuro);
 }
 
-/* Ajuste para que o conteúdo não fique escondido atrás do header */
-body {
-  padding-top: 70px; /* distância do topo */
+header nav a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: var(--rosa-escuro);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
 }
 
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* Ajuste do conteúdo */
+body { padding-top: 100px; }
+
+/* ============================
+   TÍTULOS
+============================ */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.4rem;
+  margin: 20px 0;
+  color: var(--preto);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--preto);
+  font-weight: 500;
+}
+
+/* ============================
+   SEÇÕES (CARDS)
+============================ */
 section {
   width: 85%;
-  max-width: 900px;
+  max-width: 880px;
   margin: 40px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 15px;
-  border-top: 6px solid var(--rosa); /* linha colorida em cima */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.226);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--branco);
+  padding: 35px;
+  border-radius: 18px;
+  border-top: 5px solid var(--rosa);
+  box-shadow: var(--shadow-soft);
+  transition: 0.3s ease;
 }
 
-/* animação suave ao passar o mouse */
 section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
 }
 
-/* título dentro do quadrado */
 section h1 {
-  font-size: 2.2rem;
   margin-bottom: 15px;
-  color: var(--preto);
+  font-size: 2.2rem;
 }
 
-/* texto dentro do quadrado */
 section p {
-  font-size: 1rem;
-  line-height: 1.6;
+  width: 90%;
+  margin: auto;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* ============================
+   BOTÕES
+============================ */
+a {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--rosa);
+  color: var(--branco);
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 140, 170, 0.25);
+}
+
+a:hover {
+  background: var(--rosa-escuro);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* botão voltar */
+a[href*="index.html"] {
+  background: var(--roxo);
   color: var(--preto);
 }
 
-/* espaçamento entre os “cards” */
-section + section {
-  margin-top: 40px;
+a[href*="index.html"]:hover {
+  background: var(--rosa-escuro);
+  color: var(--branco);
 }
 
+/* ============================
+   IMAGENS
+============================ */
+img {
+  margin: 25px auto;
+  max-width: 230px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  transition: 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ============================
+   RODAPÉ
+============================ */
+footer small {
+  margin-top: 45px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ============================
+   ROLAGEM SUAVE
+============================ */
 html {
-  scroll-behavior: smooth; /* rolagem suave 💨 */
+  scroll-behavior: smooth;
 }
-
-section {
-  scroll-margin-top: 100px; /* ajusta se o header for fixo */
-}
-
-
